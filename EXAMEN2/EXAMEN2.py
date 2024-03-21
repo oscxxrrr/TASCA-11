@@ -186,11 +186,11 @@ def ex12():
         e.getPantalla()
 
 def ex13():
-    with open("/home/cicles/AO/TASCA-11/EXAMEN2/ex20txt", "w") as f:
+    with open("/home/cicles/AO/TASCA-11/EXAMEN2/ex20.txt", "w") as f:
         for e in range(10):
-            f.writte(e)
+            f.write(str(e)+"\n")
     a = []
-    with open("/home/cicles/AO/TASCA-11/EXAMEN2/ex20txt", "r") as f: 
+    with open("/home/cicles/AO/TASCA-11/EXAMEN2/ex20.txt", "r") as f: 
         for e in f:
             a.append(e)
         print(a)
