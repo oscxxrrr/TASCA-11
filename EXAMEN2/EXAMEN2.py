@@ -1,6 +1,6 @@
 def menu():
     op = 0
-    while op > 1 or op < 14:
+    while op < 1 or op > 14:
         print("""
             Programa exmane:
             1-Estructuras condicionals, if
@@ -57,7 +57,7 @@ def ex3():
     for i in range(3):
         a.append (input("Introdueix una paraula: "))
     for e in a:
-        b.append(len(a))
+        b.append(len(e))
     print("Les longituds de la llsta {} són {}".format(a,b))
 
 def ex4():
@@ -98,47 +98,13 @@ def ex9():
 def ex10():
     a = [1,2,3,4,5]
     b = [6,7,8,9,10]
-    c = zip(a,b)
+    c = list(zip(a,b))
     print(c)
 
 def ex11():
     a = [1,2,3,4,5]
     b = list(filter(lambda x: x%2==1, a))
     print("Los numeros impares de la lista {} són: {}".format(a,b))
-
-
-    class Ordinador():
-        def __init__(self,tipus,pantalla):
-            self.tipus = tipus
-            self.pantalla = pantalla
-        def getTipus(self):
-            print(self.tipus)
-        def getPantlla(self):
-            print(self.pantalla)
-
-    class Portatil(Ordinador):
-        def getTipus(self):
-            print("Soc un portatil")
-        def getPantalla(self):
-            print('15"')
-
-    class Tablet(Ordinador):
-        def getTipus(self):
-            print("Soc una tablet")
-        def getPantalla(self):
-            print('9"')
-
-    class Servidor(Ordinador):
-        def getTipus(self):
-            print("Soc un servidor")
-        def getPantalla(self):
-            print('21"')
-
-    class PC(Ordinador):
-        def getTipus(self):
-            print("Soc un PC")
-        def getPantalla(self):
-            print('27"')
 
 def ex12():
     class Ordinador():
@@ -187,13 +153,12 @@ def ex12():
 
 def ex13():
     with open("/home/cicles/AO/TASCA-11/EXAMEN2/ex20.txt", "w") as f:
-        for e in range(10):
+        for e in range(1,11):
             f.write(str(e)+"\n")
-    a = []
+   
     with open("/home/cicles/AO/TASCA-11/EXAMEN2/ex20.txt", "r") as f: 
         for e in f:
-            a.append(e)
-        print(a)
+            print(e)
 
 #Programa Principal
 op = 1
@@ -243,3 +208,4 @@ while op != 14:
             ex13()
         case 14:
             print("Programa acabat, que ho passi molt be i gracies per utilitzar el programa. ")
+
